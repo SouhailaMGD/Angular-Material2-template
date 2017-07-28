@@ -1,0 +1,92 @@
+<md-card>
+<h2> New Project </h2>
+<form class="project-form">
+
+  <div fxLayout="row">
+
+  <md-input-container fxFlex>
+   <input mdInput placeholder="Name" value="">
+   <md-icon mdSuffix>edit</md-icon>
+  </md-input-container>
+
+  <md-input-container fxFlex >
+   <input mdInput placeholder="Command Reference" value="">
+   <md-icon mdSuffix>edit</md-icon>
+  </md-input-container>
+  
+</div>
+
+
+<div fxLayout="row" >
+<md-input-container fxFlex>
+  <input mdInput [mdDatepicker]="picker1" placeholder="Planned at">
+  <button mdSuffix [mdDatepickerToggle]="picker1"></button>
+</md-input-container>
+<md-datepicker #picker1></md-datepicker>
+
+<md-input-container fxFlex >
+  <input mdInput [mdDatepicker]="picker2" placeholder="Delivered at">
+  <button mdSuffix [mdDatepickerToggle]="picker2"></button>
+</md-input-container>
+<md-datepicker #picker2></md-datepicker>
+
+</div>
+
+<div fxLayout="row" >
+<md-input-container fxFlex>
+  <input mdInput [mdDatepicker]="picker3" placeholder="Client Planned at">
+  <button mdSuffix [mdDatepickerToggle]="picker3"></button>
+</md-input-container>
+<md-datepicker #picker3></md-datepicker>
+
+<md-input-container fxFlex >
+  <input mdInput [mdDatepicker]="picker4" placeholder="Client Delivered at">
+  <button mdSuffix [mdDatepickerToggle]="picker4"></button>
+</md-input-container>
+<md-datepicker #picker4></md-datepicker>
+
+</div>
+
+<div fxLayout="row">
+<md-input-container class="example-full-width" color ="accent" fxFlex >   
+    <input type="text" mdInput placeholder="Note">
+    <md-icon mdSuffix>edit</md-icon>
+  </md-input-container>
+
+<md-select placeholder="State" fxFlex >
+  <md-option *ngFor="let state of states" [value]="state.value">
+    {{ state.viewValue }}
+  </md-option>
+</md-select>
+</div>
+
+<div fxLayout="row">
+
+<md-input-container class="example-full-width" color ="accent" fxFlex >   
+    <input type="number" mdInput placeholder="Estimated Budget">
+    <md-icon mdSuffix>edit</md-icon>
+  </md-input-container>
+
+<md-input-container class="example-full-width" color ="accent" fxFlex >   
+    <input type="number" mdInput placeholder="Client Budget">
+    <md-icon mdSuffix>edit</md-icon>
+  </md-input-container>
+  
+</div>
+
+<div>
+<md-input-container class="example-full-width" color ="accent" >   
+    <input type="number" mdInput placeholder=" Budget">
+    <md-icon mdSuffix>edit</md-icon>
+  </md-input-container>
+</div>
+
+
+
+
+
+
+
+</form>
+
+</md-card>

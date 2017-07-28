@@ -1,0 +1,15 @@
+
+md-card {
+  max-width: 70%;
+  margin: 2em auto;
+}
+.done {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+}
+.example-header-image {
+  background-image: url('../../assets/img/index.jpg');
+  background-size: cover;
+}

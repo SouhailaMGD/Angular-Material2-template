@@ -1,0 +1,33 @@
+.example-container {
+  width: 100%;
+  height: 100%;
+  min-height: 900px;
+}
+
+.example-sidenav-content {
+  display: flex;
+  margin-left: auto;
+  background-color: blue;
+  min-height: 60px;
+}
+
+.example-sidenav {
+  width: 18%;
+  background-color: #212121;
+  height: 100%;
+}
+
+.md-button {
+  padding: 0 6px 0 6px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: blue;
+}
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}

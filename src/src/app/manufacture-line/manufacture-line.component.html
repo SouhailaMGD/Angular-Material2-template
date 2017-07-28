@@ -1,0 +1,37 @@
+<md-card>
+<h2> New Manufacture Line </h2>
+<form class="Manufacture-Line-form">
+
+  <div>
+  <md-input-container>
+   <input mdInput placeholder="Mac Adress" value="" type="text">
+   <md-icon mdSuffix>edit</md-icon>
+  </md-input-container>
+</div>
+
+
+
+<div fxLayout="row">
+  <md-slide-toggle fxFlex>Input terminal State </md-slide-toggle>
+
+  <md-slide-toggle fxFlex >OutPut terminal State </md-slide-toggle>
+
+  <md-slide-toggle fxFlex >Display State </md-slide-toggle>
+</div>
+
+<div fxLayout="row" >
+<md-select placeholder="State" fxFlex>
+  <md-option *ngFor="let state of states" [value]="state.value">
+    {{ state.viewValue }}
+  </md-option>
+</md-select>
+
+  <md-input-container fxFlex >
+   <input mdInput placeholder="Process Order" value="" type="number">
+   <md-icon mdSuffix>edit</md-icon>
+  </md-input-container>
+</div>
+
+</form>
+
+</md-card>

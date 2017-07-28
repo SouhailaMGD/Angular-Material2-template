@@ -1,0 +1,40 @@
+<md-sidenav-container class="example-container">
+<md-sidenav #sidenav (window:resize)="$event.target.innerWidth<769?sidenav.close():sidenav.open()" opened="true">
+      <header class="nav-header">
+
+    </header>
+<md-toolbar class="md-tall md-hue-2"  style="background-color:#F8B8D0;">
+
+  <span>Custom Toolbar</span>
+    <md-icon class="example-icon">favorite</md-icon>
+
+  <md-toolbar-row>
+    <span>Second Line</span>
+    <span class="example-spacer"></span>
+    <md-icon class="example-icon">verified_user</md-icon>
+  </md-toolbar-row>
+
+  <md-toolbar-row>
+    <span>Third Line</span>
+    <span class="example-spacer"></span>
+    <md-icon class="example-icon">delete</md-icon>
+  </md-toolbar-row>
+</md-toolbar>
+    </md-sidenav>
+
+    <div class="example-sidenav-content" >
+      <button md-button class="md-icon-button" aria-label="Settings" (click)="sidenav.toggle('left')">
+        <i class="material-icons">list</i>
+      </button>
+      <span class="example-spacer"></span>
+        <button md-button class="md-icon-button" [mdMenuTriggerFor]="appMenu"><md-icon>settings</md-icon></button>
+    </div>
+
+<md-menu #appMenu="mdMenu">
+  <button md-menu-item> Settings </button>
+  <button md-menu-item> Help </button>
+</md-menu>
+<div class="">
+  <app-card></app-card>
+</div>
+  </md-sidenav-container>

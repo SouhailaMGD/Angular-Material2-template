@@ -1,0 +1,53 @@
+<md-card>
+<h2> New Delivery </h2>
+<form class="delivery-form">
+
+<div fxLayout="row">
+  <md-input-container fxFlex>
+   <input mdInput placeholder="Reference" value="">
+   <md-icon mdSuffix>edit</md-icon>
+  </md-input-container>
+
+  <md-input-container color="warn" fxFlex  >
+  <input type="number" mdInput placeholder="Quantity" value=""  >
+  <md-icon mdSuffix>edit</md-icon>
+  </md-input-container>
+</div>
+
+<div fxLayout="row" >
+<md-input-container fxFlex >
+  <input mdInput [mdDatepicker]="picker" placeholder="Planned At">
+  <button mdSuffix [mdDatepickerToggle]="picker"></button>
+</md-input-container>
+<md-datepicker #picker></md-datepicker>
+
+
+<md-input-container fxFlex >
+  <input mdInput [mdDatepicker]="picker1" placeholder="Delivered At">
+  <button mdSuffix [mdDatepickerToggle]="picker1"></button>
+</md-input-container>
+<md-datepicker #picker1></md-datepicker>
+
+</div>
+
+<div>
+  <md-input-container color="warn"   >
+  <input type="text" mdInput placeholder="Note" value=""  >
+  <md-icon mdSuffix>edit</md-icon>
+  </md-input-container>
+</div>
+
+<div>
+<md-select placeholder="State">
+  <md-option *ngFor="let state of states" [value]="state.value">
+    {{ state.viewValue }}
+  </md-option>
+</md-select>
+
+</div>
+
+
+
+</form>
+
+</md-card>

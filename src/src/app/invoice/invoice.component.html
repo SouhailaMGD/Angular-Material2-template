@@ -1,0 +1,29 @@
+<md-card>
+<h2> New Invoice </h2>
+<form class="invoice-form">
+
+  <div fxLayout="row">
+
+  <md-input-container fxFlex>
+   <input mdInput placeholder="Total Price" value="" type="number">
+   <md-icon mdSuffix>edit</md-icon>
+  </md-input-container>
+
+  <md-input-container fxFlex >
+   <input mdInput placeholder="Net Price" value=""  type="number" >
+   <md-icon mdSuffix>edit</md-icon>
+  </md-input-container>
+  
+</div>
+
+
+<md-input-container  >
+  <input mdInput [mdDatepicker]="picker1" placeholder="Invoice date" >
+  <button mdSuffix [mdDatepickerToggle]="picker1"></button>
+</md-input-container>
+<md-datepicker #picker1></md-datepicker>
+
+
+</form>
+
+</md-card>

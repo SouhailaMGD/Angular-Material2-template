@@ -1,0 +1,37 @@
+<md-card>
+<h2> New Terminal </h2>
+<form class="delivery-form">
+
+<div fxLayout="row">
+  <md-input-container fxFlex style="margin-right : 5px ;">
+   <input mdInput placeholder="Mac Adress" value="">
+   <md-icon mdSuffix>edit</md-icon>
+  </md-input-container>
+
+  <md-input-container fxFlex style="margin-left : 5px ;">
+   <input mdInput placeholder="Ip Adress" value="">
+   <md-icon mdSuffix>edit</md-icon>
+  </md-input-container>
+
+</div>
+
+
+<div fxLayout="row">
+<md-select placeholder="State" fxFlex>
+  <md-option *ngFor="let state of states" [value]="state.value">
+    {{ state.viewValue }}
+  </md-option>
+</md-select>
+
+<md-select placeholder="Authorization" fxFlex >
+  <md-option *ngFor="let authorization of authorizations" [value]="authorization.value">
+    {{ authorization.viewValue }}
+  </md-option>
+</md-select>
+</div>
+
+
+
+</form>
+
+</md-card>

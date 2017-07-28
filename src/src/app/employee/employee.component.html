@@ -1,0 +1,85 @@
+<md-card>
+<h2> New Employee </h2>
+<form class="employee-form">
+
+  <div fxLayout="row">
+
+  <md-input-container fxFlex>
+   <input mdInput placeholder="Identifier" value="">
+   <md-icon mdSuffix>person</md-icon>
+  </md-input-container>
+
+  <md-input-container fxFlex >
+   <input mdInput placeholder="Name" value="">
+   <md-icon mdSuffix>person</md-icon>
+  </md-input-container>
+  
+</div>
+
+<div fxLayout="row">
+  <md-input-container class="example-full-width" fxFlex>
+    <input mdInput placeholder="Email" [formControl]="emailFormControl">
+    <md-icon mdSuffix>email</md-icon>
+    <md-error *ngIf="emailFormControl.hasError('pattern')">
+      Please enter a valid email address
+    </md-error>
+    <md-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </md-error>
+  </md-input-container>
+
+
+
+
+<md-input-container class="example-full-width" color ="accent" fxFlex >
+    <span mdPrefix>+212 &nbsp;</span>
+    <input type="tel" mdInput placeholder="Telephone">
+    <md-icon mdSuffix>phone</md-icon>
+  </md-input-container>
+</div>
+
+<div fxLayout="row">
+<md-input-container fxFlex >
+  <input mdInput [mdDatepicker]="picker1" placeholder="Hiring date">
+  <button mdSuffix [mdDatepickerToggle]="picker1"></button>
+</md-input-container>
+<md-datepicker #picker1></md-datepicker>
+
+<md-input-container fxFlex>
+  <input mdInput [mdDatepicker]="picker2" placeholder="Termination Date">
+  <button mdSuffix [mdDatepickerToggle]="picker2"></button>
+</md-input-container>
+<md-datepicker #picker2></md-datepicker>
+</div>
+
+
+
+<div fxLayout="row">
+<md-select placeholder="Job" fxFlex >
+  <md-option *ngFor="let job of jobs" [value]="job.value">
+    {{ job.viewValue }}
+  </md-option>
+</md-select>
+
+<md-select placeholder="State" fxFlex >
+  <md-option *ngFor="let state of states" [value]="state.value">
+    {{ state.viewValue }}
+  </md-option>
+</md-select>
+</div>
+
+
+<div fxLayout="row">
+  <md-input-container fxFlex >
+   <input mdInput placeholder="Adress" value="">
+   <md-icon mdSuffix>home</md-icon>
+  </md-input-container>
+
+  
+
+
+</div>
+
+</form>
+
+</md-card>
